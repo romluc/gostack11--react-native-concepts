@@ -1,13 +1,28 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, StatusBar } from 'react-native';
 
 export default function App() {
-  return <View style={styles.container} />;
+  return (
+    <>
+      <StatusBar barStyle='light-content' />
+      <View style={styles.container}>
+        <Text style={styles.title}>Hello maaans!</Text>
+      </View>
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#008b8b',
+    backgroundColor: '#007788',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  title: {
+    color: '#F5F5F5',
+    fontSize: 32,
+    fontWeight: 'bold',
   },
 });
